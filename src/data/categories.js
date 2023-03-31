@@ -1,23 +1,23 @@
 export const Categories = [
   {
     id: 1,
-    name: "インテリア"
+    name: "11111"
   },
   {
     id: 2,
-    name: "レディース"
+    name: "22222"
   },
   {
     id: 3,
-    name: "ベビー・キッズ"
+    name: "33333"
   },
   {
     id: 4,
-    name: "エンタメ"
+    name: "44444"
   },
   {
     id: 5,
-    name: "メンズ"
+    name: "55555"
   }
 ]
 
