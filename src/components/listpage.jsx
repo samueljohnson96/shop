@@ -13,12 +13,15 @@ const Listpage = () => {
   const [name, setName]=useState("");
 
   return(
-      <>
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 place-content-center place-items-center pt-24">
+      <div className="relative">
+        <div className=" absolute top-0 right-0 h-full bg-[#ffffff] w-[2px] z-20"></div>
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 place-content-center place-items-center pt-24 z-10">
           {CardData.filter(search => (search.name.toLowerCase().includes(name)|| name == "") && (select == 0 || select == search.category_id)).map((item, key)=> (
               <Card
                 index={key}
-                is_sold_out={item.is_sold_out}
+                review={item.review}
+                view={item.view}
+                useful={item.useful}
                 image={item.image}
                 name={item.name}
                 price={item.price}
@@ -28,7 +31,7 @@ const Listpage = () => {
               />
             ))}
         </div>
-      </>
+        </div>
   )
 }
 export default Listpage;

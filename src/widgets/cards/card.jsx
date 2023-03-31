@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { MdEuroSymbol } from "react-icons/md";
 import { TbCurrencyDollar } from "react-icons/tb";
 
-export const Card = ({ id, is_sold_out, image, name, price, ex_price, like_count }) => {
+export const Card = ({ id, image, name, price, ex_price, view, useful ,review}) => {
   return (
-    <div className="mb-10">
-      <div className="relative w-full h-full border-[1px] border-[#cbcbcb] border-t-0 border-l-0 p-4 ">
+    <div className="mb-10 relative">
+      <div className="w-full h-full border-[1px] border-[#cbcbcb] border-t-0 border-l-0 px-4 py-3">
+        <p className="absolute top-[-30px] flex justify-start text-[24px] font-medium underline">{review}</p>
         <div>
           <Link to={`/detail/${id}`}>
             <img src={image} alt="" />
@@ -19,16 +20,17 @@ export const Card = ({ id, is_sold_out, image, name, price, ex_price, like_count
               <p className="text-lg font-normal">{price}</p>
               <TbCurrencyDollar size="20px" />
             </div>
-            <div>
-              <p className="text-base">gggggg</p>
+            <div className="flex flex-col items-end">
+              <p className="text-base">{useful}</p>
               <div className="flex justify-center items-center">
                 <p className=" text-xl font-bold">{ex_price}</p>
-                <MdEuroSymbol />
               </div>
             </div>
           </div>
         </div>
       </div>
+      {view ? (<button className="absolute border-[1px] right-[2px] border-[#cbcbcb] p-2">{view}</button>):(<></>)}
+      
     </div>
   )
 }

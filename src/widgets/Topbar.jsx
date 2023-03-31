@@ -23,6 +23,18 @@ export default function Topbar() {
 
   const [value, setValue] = useState("");
 
+  const buttonlist = [
+    {name:" Автоаксесуари"},
+    {name:" Led та освітлення"},
+    {name:" Фари"},
+    {name:" Декоративне свiтло"},
+    {name:" Електроннi компоненти"},
+    {name:" Кабельна продукцiя"},
+    {name:" Лазерне обладнання"},
+    {name:" Мiкрофони та аксесуари"},
+    {name:" Свiтлове обладнання"},
+    {name:" Трансляцiйне обладнання"},
+  ]
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-2 text-[16px]">
       <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ПРО НАС</button>
@@ -32,19 +44,11 @@ export default function Topbar() {
     </ul>
   );
   const dropdown = (
-     <div className={`bg-[#2b292a] flex flex-col gap-3 text-white top-[90px] text-[16px] w-[330px] items-start p-5 shadow-inner z-0 absolute ${openDown ? "" : "hidden"} `}>
-      <button>Автоаксесуари</button>
-      <button>Led та освітлення</button>
-      <button>Фари </button>
-      <button>Декоративне свiтло</button>
-      <button>Електроннi компоненти </button>
-      <button>Кабельна продукцiя</button>
-      <button>Лазерне обладнання</button>
-      <button>Мiкрофони та аксесуари</button>
-      <button>Металевi стiйки, ферми</button>
-      <button>Свiтлове обладнання </button>
-      <button>Свiтлове обладнання</button>
-      <button>Трансляцiйне обладнання</button>
+     <div className={`bg-[#2b292a] flex flex-col text-white pt-1 top-[90px] text-[16px] w-[330px] items-center text-start shadow-inner z-0 absolute ${openDown ? "" : "hidden"} `}>
+     {buttonlist.map((item, key)=>(
+        <button className=" focus:bg-white focus:text-[#333030] w-full border-b-[1px] border-[white] text-start px-5 py-2 ">{item.name}</button>
+     ))}
+     
     </div>
   );
 
