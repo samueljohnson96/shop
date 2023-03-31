@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineHeart } from "react-icons/ai";
+import { MdEuroSymbol } from "react-icons/md";
 import { TbCurrencyDollar } from "react-icons/tb";
 
 export const Card = ({ id, is_sold_out, image, name, price, ex_price, like_count }) => {
@@ -23,7 +23,7 @@ export const Card = ({ id, is_sold_out, image, name, price, ex_price, like_count
               <p className="text-base">gggggg</p>
               <div className="flex justify-center items-center">
                 <p className=" text-xl font-bold">{ex_price}</p>
-                <AiOutlineHeart />
+                <MdEuroSymbol />
               </div>
             </div>
           </div>
