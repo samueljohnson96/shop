@@ -11,6 +11,7 @@ import { VscSearch } from 'react-icons/vsc'
 import { GiShoppingCart } from 'react-icons/gi'
 import { HiOutlineUserCircle } from 'react-icons/hi'
 import { VscThreeBars } from 'react-icons/vsc'
+import { Link } from "react-router-dom";
 export default function Topbar() {
   const [openNav, setOpenNav] = useState(false);
   const [openDown, setOpenDown] = useState(false);
@@ -37,10 +38,15 @@ export default function Topbar() {
   ]
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-2 text-[16px]">
-      <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ПРО НАС</button>
-      <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ДЛЯ ПАРТНЕРІВ</button>
-      <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ПРО ДЛЯ ПАРТНЕРІВ</button>
-      <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ДОСТАВКА</button>
+      <Link to= "/home">
+        <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ПРО НАС</button>
+      </Link>  
+      <Link to= "/goods">
+        <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ДЛЯ ПАРТНЕРІВ</button>
+      </Link> 
+      <Link to= "/goods">
+        <button className="py-2 px-4 rounded-md bg-transparent hover:bg-white focus:bg-white hover:text-[#333030] focus:text-[#333030] ">ДОСТАВКА</button>
+      </Link>
     </ul>
   );
   const dropdown = (
@@ -48,7 +54,6 @@ export default function Topbar() {
      {buttonlist.map((item, key)=>(
         <button className=" focus:bg-white focus:text-[#333030] w-full border-b-[1px] border-[white] text-start px-5 py-2 ">{item.name}</button>
      ))}
-     
     </div>
   );
 
@@ -59,7 +64,6 @@ export default function Topbar() {
       <div className="max-w-[1600px] z-50  mx-auto">
         <div className="w-full flex items-center justify-between text-white">
           <div className="flex items-center gap-8 relative">
-            {/* <button onClick={() => setOpenDown(!openDown)} ><VscThreeBars size="30px" /> </button> */}
             <button onClick={() => setOpenDown(!openDown)} ><VscThreeBars size="30px" /> </button>
              {dropdown}
             <img src={logo} alt="..." />

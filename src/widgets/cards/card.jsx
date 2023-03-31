@@ -6,7 +6,7 @@ import { TbCurrencyDollar } from "react-icons/tb";
 export const Card = ({ id, image, name, price, ex_price, view, useful ,review}) => {
   return (
     <div className="mb-20 relative">
-      <div className="w-full  border-[1px] border-t-0 border-[#cbcbcb] px-4 py-3">
+      <div className="w-full  border-[1px]  px-4 py-3">
       {/* <div className="w-[250px] h-full px-4 py-3"> */}
         <p className="absolute top-[-30px] flex justify-start text-[24px] font-medium underline">{review}</p>
         <div>
@@ -24,7 +24,7 @@ export const Card = ({ id, image, name, price, ex_price, view, useful ,review}) 
             <div className="flex flex-col items-end">
               <p className="text-base">{useful}</p>
               <div className="flex justify-center items-center">
-                <p className=" text-xl font-bold">{ex_price}</p>
+                <p className=" text-xl font-bold">{ex_price}₴</p>
               </div>
             </div>
           </div>
