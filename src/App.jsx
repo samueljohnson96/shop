@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Detail from "./pages/detail";
 import Listpage from "./components/listpage";
 import Topbar from "./widgets/Topbar";
+import Footer from "./widgets/footer";
 import { Home } from "./pages/home";
 function App() {
   return (
@@ -10,13 +11,14 @@ function App() {
         <Topbar />
       </div>
       <div className="flex w-full justify-center pt-32">
-        <div className="w-[80%]">
+        <div className="w-full md:w-[80%] ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/detail/:id" element={<Detail />} />
           </Routes>
         </div>
       </div>
+        <Footer/>
     </>
   );
 }

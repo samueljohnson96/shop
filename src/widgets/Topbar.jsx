@@ -59,6 +59,7 @@ export default function Topbar() {
       <div className="max-w-[1600px] z-50  mx-auto">
         <div className="w-full flex items-center justify-between text-white">
           <div className="flex items-center gap-8 relative">
+            {/* <button onClick={() => setOpenDown(!openDown)} ><VscThreeBars size="30px" /> </button> */}
             <button onClick={() => setOpenDown(!openDown)} ><VscThreeBars size="30px" /> </button>
              {dropdown}
             <img src={logo} alt="..." />

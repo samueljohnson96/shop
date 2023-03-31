@@ -15,7 +15,7 @@ import image02 from '../../public/images/Untitled-1.png';
 
 export default function App() {
   return (
-    <div className="w-[75%] ml-80">
+    <div className=" w-full md:pl-[20%] p-5 relative">
       <Swiper
         slidesPerView={1}
         spaceBetween={0}
@@ -34,6 +34,7 @@ export default function App() {
         className="mySwiper relative"
         >
         <SwiperSlide>
+          <p className="text-[62px] font-bold text-white left-[5%] absolute top-[20%]">стання пропозицiя:</p>
            <img src={image01} alt="..."/>
         </SwiperSlide>
         <SwiperSlide>
